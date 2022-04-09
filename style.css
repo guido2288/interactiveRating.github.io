@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap');
+
+:root {
+    --white: hsl(0, 0%, 100%);
+    --lightGrey: hsl(217, 12%, 63%);
+    --mediumGrey: hsl(216, 12%, 54%);
+    --darkBlue: hsl(213, 19%, 18%);
+    --veryDarkBlue: hsl(216, 12%, 8%);
+    --orange: hsl(25, 97%, 53%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Overpass', sans-serif;
+    
+}
+
+body {
+    display: flex;
+    background-color: var(--veryDarkBlue);
+    justify-content: center;
+    min-height: 100vh;
+    font-size: 15px;
+}
+
+.card {
+    width: 25rem;
+    height: 27rem;
+    background: linear-gradient(0deg,hsl(216, 26%, 15%),hsl(214, 25%, 17%));
+    align-self: center;
+    border-radius: 6%;
+
+}
+
+.noDisplay {
+    display: none;
+}
+
+.card .start-icon {
+    background-color:hsl(214, 14%, 22%);
+    border-radius: 100%;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 1px solid 100%;
+    margin-top: 3rem;
+    margin-left: 2rem;
+    display: flex;
+    align-items: center;
+}
+
+.card .start-icon img{
+    width: 40%;
+    margin: auto;
+}
+
+.card .title{
+    margin-left: 2rem;
+    margin-top: 2rem;
+}
+
+.card .title h2 {
+    color: var(--white);
+    font-weight: 700;
+    font-size: 1.7rem;
+}
+
+.card .text {
+    margin-left: 2rem;
+    margin-top: 1rem;
+    font-weight: 400;
+    color: var(--mediumGrey);
+    line-height: 1.5rem;
+    font-size: 1rem;
+}
+
+.card .numbers ul {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 1.4rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    
+}
+
+.card .numbers ul li {
+    color: var(--lightGrey);
+    background-color: hsl(214, 14%, 22%);
+    border-radius: 100%;
+    width: 3rem;
+    height: 3rem;
+    display: inline-block;
+    padding: 18px;
+}
+
+.card .numbers ul li:hover {
+    background-color: var(--orange);
+    cursor: pointer;
+    color: var(--white);
+} 
+
+.card .container-btn {
+    text-align: center;
+    margin-top: 1.4rem;
+}
+
+.card .container-btn .btn-subm{
+    background-color: var(--orange);
+    color: var(--white);
+    border-radius: 50px;
+    padding: 0.7rem  8.5rem;
+    outline: none;
+    border: none;
+    font-size: 1rem;
+    letter-spacing: 0.1rem;
+}
+
+.card .container-btn .btn-subm:hover {
+    background-color: var(--white);
+    color: var(--orange);
+    cursor: pointer;
+}
+
+.card .numbers ul  .star-selected {
+    background-color: var(--lightGrey);
+    color: var(--white);
+}
+
+/* Thank You Card */
+
+.cardTksNodisplay {
+    display: none;
+}
+
+.cardTks {
+    width: 25rem;
+    height: 27rem;
+    background: linear-gradient(0deg,hsl(216, 26%, 15%),hsl(214, 25%, 17%));
+    align-self: center;
+    border-radius: 6%;
+}
+
+.cardTks .tksImg {
+    text-align: center;
+    margin-top: 3rem;
+}
+
+.cardTks .selected {
+    display: flex;
+    justify-content: center;
+}
+
+.cardTks .selected p{
+    color: hsl(25, 97%, 53% , 0.8); 
+    background-color: hsl(214, 14%, 22%);
+    margin-top: 2rem;
+    border-radius: 20px;
+    padding: 10px  18px;
+    letter-spacing: 1px;
+    font-weight: 400;
+}
+
+.cardTks .thankYouTit {
+    display: flex;
+    justify-content: center;
+}
+
+.cardTks .thankYouTit h2{
+    color: var(--white);
+    margin-top: 2rem;
+    font-weight: 700;
+    font-size: 1.7rem;
+}
+
+.cardTks .tksSentence {
+    display: flex;
+    justify-content: center;
+}
+
+.cardTks .tksSentence p{
+    color: var(--mediumGrey);
+    text-align: center;
+    line-height: 1.5rem;
+    margin-top: 1rem;
+}
+
+
+@media (max-width: 1440px ) {
+    .card{
+        width: 40rem;
+        height: 45rem;
+    }
+    .card .start-icon{
+        width: 5rem;
+        height: 5rem;
+        margin-top: 5rem;
+        margin-left: 4rem;
+    }
+    .card .title{
+        margin-left: 4rem;
+        margin-top: 4rem;
+    }
+    .card .title h2 {
+        font-size: 3rem;
+    }
+    .card .text {
+        margin-left: 4rem;
+        margin-top: 3rem;
+        line-height: 2rem;
+        font-size: 1.5rem;
+    }
+    .card .numbers ul {
+        margin-top: 2rem;
+        margin-left: 4rem;
+        margin-right: 4rem;
+    }
+    .card .numbers ul li {
+        width: 5rem;
+        height: 5rem;
+        padding: 28px;
+        font-size: 1.5rem;
+    }
+    .card .container-btn {
+        margin-top: 3rem;
+    }
+    .card .container-btn .btn-subm{
+        padding: 1.5rem  12rem;
+        font-size: 1.3rem;
+        letter-spacing: 0.2rem;
+    }
+}
+
+
